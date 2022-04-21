@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.myapp.navigation.NotesNavHost
 import com.example.myapp.ui.theme.MyAppTheme
 
@@ -18,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyAppTheme {
                 Scaffold(topBar = {
-                                  TopAppBar(title = { Text(text = "TOP APP BAR") }, backgroundColor = Color.Blue, contentColor = Color.White)
+                                  TopAppBar(title = { Text(text = "TOP APP BAR") }, backgroundColor = Color.Blue, contentColor = Color.White, elevation = 12.dp)
                 }, content = {
                     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
                         NotesNavHost()
